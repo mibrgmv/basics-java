@@ -1,9 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        try (var con = Database.Connect()) {
-            System.out.println("Successful Connection");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        int id = ProductDB.add(new Product("TV", 1200.50));
+        System.out.println(String.format("PRODUCT ID: %s", id));
     }
 }

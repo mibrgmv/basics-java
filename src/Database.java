@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    public static Connection Connect() {
+    public static Connection connect() {
         try {
             var url = DatabaseConfig.getDbUrl();
             var username = DatabaseConfig.getDbUsername();
