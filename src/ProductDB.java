@@ -40,4 +40,25 @@ public class ProductDB {
         }
         return -1;
     }
+
+    public static Product findById(int id){
+        var sql = "SELECT id, name, price FROM products WHERE id=?";
+
+        try (var conn =  Database.connect();
+             var pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, id);
+            var rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return new Product(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDouble("price")
+                );
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
 }
