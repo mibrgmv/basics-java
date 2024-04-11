@@ -1,4 +1,7 @@
+import javax.xml.crypto.Data;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDB {
 
@@ -61,4 +64,28 @@ public class ProductDB {
         }
         return null;
     }
+
+    public static List<Product> findAll() {
+        var products = new ArrayList<Product>();
+
+        var sql = "SELECT id, name, price FROM products ORDER BY id";
+
+        try (var conn =  Database.connect();
+             var stmt = conn.createStatement()) {
+
+            var rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                var product = new Product(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDouble("price"));
+                products.add(product);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return products;
+    }
+
 }
