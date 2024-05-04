@@ -1,20 +1,29 @@
 package lab2;
 
 public class GenericItem {
+
+    static int currentID = 1;
     public int ID;
     public String name;
     public float price;
     public Category category;
 
-    public GenericItem(int ID, String name, float price) {
-        this.ID = ID;
+    public GenericItem() {
+    }
+
+    public GenericItem(String name) {
+        this.name = name;
+    }
+
+    public GenericItem(String name, float price) {
+        this.ID = currentID++;
         this.name = name;
         this.price = price;
         this.category = Category.GENERAL;
     }
 
-    public GenericItem(int ID, String name, float price, Category category) {
-        this.ID = ID;
+    public GenericItem(String name, float price, Category category) {
+        this.ID = currentID++;
         this.name = name;
         this.price = price;
         this.category = category;

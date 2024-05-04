@@ -4,8 +4,8 @@ public class TechnicalItem extends GenericItem {
 
     short warrantyTime;
 
-    public TechnicalItem(int ID, String name, float price, short warrantyTime) {
-        super(ID, name, price, Category.TECHNICAL);
+    public TechnicalItem(String name, float price, short warrantyTime) {
+        super(name, price, Category.TECHNICAL);
         this.warrantyTime = warrantyTime;
     }
 
