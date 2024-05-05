@@ -1,6 +1,6 @@
 package lab3;
 
-import lab2.FoodItem;
+import lab4.ru.billing.stocklist.FoodItem;
 
 public class WorkArray <T extends Number> {
     T[] arrNums;
