@@ -8,6 +8,7 @@ import lab4.ru.billing.stocklist.TechnicalItem;
 import java.time.LocalDate;
 
 public class Lab2 {
+
     public static void main(String[] args) {
         var apple= new GenericItem("Apple", 12, Category.FOOD);
         var dress = new GenericItem("Dress", 150, Category.DRESS);
