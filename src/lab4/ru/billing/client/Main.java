@@ -9,6 +9,10 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        task2();
+    }
+
+    private static void task1() {
         ItemCatalog itemCatalog = new ItemCatalog();
         try {
             itemCatalog.addItem(new GenericItem("Apple"));
@@ -46,6 +50,18 @@ public class Main {
         } catch (CatalogLoadException e) {
             throw new RuntimeException(e);
         }
+        itemCatalog.printItems();
+    }
+
+    public static void task2() {
+        CatalogFileLoader catalogFileLoader = new CatalogFileLoader("/path/to/file");
+        ItemCatalog itemCatalog = new ItemCatalog();
+        try {
+            catalogFileLoader.load(itemCatalog);
+        } catch (CatalogLoadException e) {
+            throw new RuntimeException(e);
+        }
+
         itemCatalog.printItems();
     }
 }
