@@ -1,4 +1,4 @@
-package lab4.ru.sync;
+package sync;
 
 public class U1901Thread extends Thread {
     private U1901Bank bankWork;

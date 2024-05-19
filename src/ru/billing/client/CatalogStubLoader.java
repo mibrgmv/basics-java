@@ -1,11 +1,11 @@
-package lab4.ru.billing.client;
+package ru.billing.client;
 
-import lab4.ru.billing.exceptions.CatalogLoadException;
-import lab4.ru.billing.exceptions.ItemAlreadyExistsException;
-import lab4.ru.billing.stocklist.Category;
-import lab4.ru.billing.stocklist.FoodItem;
-import lab4.ru.billing.stocklist.GenericItem;
-import lab4.ru.billing.stocklist.ItemCatalog;
+import ru.billing.exceptions.CatalogLoadException;
+import ru.billing.exceptions.ItemAlreadyExistsException;
+import ru.billing.stocklist.Category;
+import ru.billing.stocklist.FoodItem;
+import ru.billing.stocklist.GenericItem;
+import ru.billing.stocklist.ItemCatalog;
 
 import java.time.LocalDate;
 

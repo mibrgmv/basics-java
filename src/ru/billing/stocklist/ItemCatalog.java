@@ -1,6 +1,6 @@
-package lab4.ru.billing.stocklist;
+package ru.billing.stocklist;
 
-import lab4.ru.billing.exceptions.ItemAlreadyExistsException;
+import ru.billing.exceptions.ItemAlreadyExistsException;
 
 import java.util.ArrayList;
 import java.util.HashMap;

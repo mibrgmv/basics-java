@@ -1,9 +1,7 @@
-package lab2;
-
-import lab4.ru.billing.stocklist.Category;
-import lab4.ru.billing.stocklist.FoodItem;
-import lab4.ru.billing.stocklist.GenericItem;
-import lab4.ru.billing.stocklist.TechnicalItem;
+import ru.billing.stocklist.Category;
+import ru.billing.stocklist.FoodItem;
+import ru.billing.stocklist.GenericItem;
+import ru.billing.stocklist.TechnicalItem;
 
 import java.time.LocalDate;
 

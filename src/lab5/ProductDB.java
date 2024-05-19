@@ -45,7 +45,7 @@ public class ProductDB {
         return -1;
     }
 
-    public static Product findById(int id){
+    public static Product findById(int id) {
         var sql = "SELECT id, name, price FROM products WHERE id=?";
 
         try (var conn =  Database.connect();

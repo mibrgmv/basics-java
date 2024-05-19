@@ -1,9 +1,9 @@
-package lab1;
-
 import java.util.Date;
 
 public class Lab1 {
     public static void main(String[] args) {
+        System.out.println("Starting project");
+
         byte v_byte=120;
         short v_short=129;
         char v_char='a'; // не было ' '

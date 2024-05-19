@@ -1,14 +1,15 @@
-package lab4.ru.billing.client;
+package ru.billing.client;
 
-import lab4.ru.billing.exceptions.CatalogLoadException;
-import lab4.ru.billing.exceptions.ItemAlreadyExistsException;
-import lab4.ru.billing.stocklist.GenericItem;
-import lab4.ru.billing.stocklist.ItemCatalog;
+import ru.billing.exceptions.CatalogLoadException;
+import ru.billing.exceptions.ItemAlreadyExistsException;
+import ru.billing.stocklist.GenericItem;
+import ru.billing.stocklist.ItemCatalog;
 
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        task1();
         task2();
     }
 
@@ -54,7 +55,7 @@ public class Main {
     }
 
     public static void task2() {
-        CatalogFileLoader catalogFileLoader = new CatalogFileLoader("/path/to/file");
+        CatalogFileLoader catalogFileLoader = new CatalogFileLoader("/Users/mibrgmv/IdeaProjects/sem4-java/src/ru/billing/client/example.txt");
         ItemCatalog itemCatalog = new ItemCatalog();
         try {
             catalogFileLoader.load(itemCatalog);

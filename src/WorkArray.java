@@ -1,20 +1,10 @@
-package lab3;
-
-import lab4.ru.billing.stocklist.FoodItem;
+import ru.billing.stocklist.FoodItem;
 
 public class WorkArray <T extends Number> {
     T[] arrNums;
 
     public WorkArray(T[] nums) {
         arrNums = nums;
-    }
-
-    public double sum(){
-        double res = 0.0;
-        for (T num : arrNums) {
-            res += num.doubleValue();
-        }
-        return res;
     }
 
     public static void main(String[] args) {
@@ -35,5 +25,13 @@ public class WorkArray <T extends Number> {
         String[] item_fld = line.split(";");
         FoodItem product = new FoodItem(item_fld[0], Float.parseFloat(item_fld[1]), Short.parseShort(item_fld[2]));
         product.printAll();
+    }
+
+    public double sum(){
+        double res = 0.0;
+        for (T num : arrNums) {
+            res += num.doubleValue();
+        }
+        return res;
     }
 }

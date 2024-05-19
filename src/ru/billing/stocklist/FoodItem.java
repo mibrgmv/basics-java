@@ -1,4 +1,4 @@
-package lab4.ru.billing.stocklist;
+package ru.billing.stocklist;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,7 @@ public class FoodItem extends GenericItem {
     private LocalDate dateOfIncome;
     private short expires;
 
-    public FoodItem (String name) {
+    public FoodItem(String name) {
         super(name);
         this.setCategory(Category.FOOD);
     }

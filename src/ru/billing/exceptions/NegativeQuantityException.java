@@ -1,4 +1,4 @@
-package lab4.ru.billing.exceptions;
+package ru.billing.exceptions;
 
 public class NegativeQuantityException extends Exception {
     public NegativeQuantityException() {

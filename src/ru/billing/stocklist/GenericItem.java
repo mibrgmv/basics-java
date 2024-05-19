@@ -1,4 +1,4 @@
-package lab4.ru.billing.stocklist;
+package ru.billing.stocklist;
 
 public class GenericItem {
 
@@ -12,7 +12,9 @@ public class GenericItem {
     }
 
     public GenericItem(String name) {
+        this.ID = currentID++;
         this.name = name;
+        this.category = Category.GENERAL;
     }
 
     public GenericItem(String name, float price) {
